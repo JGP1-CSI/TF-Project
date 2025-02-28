@@ -4,7 +4,7 @@ import cors from 'cors';
 
 const app = express();
 
-// Enable CORS for frontend
+
 app.use(cors());
 app.use(express.json());
 
@@ -26,7 +26,6 @@ sql.connect(dbConfig).then((connectedPool) => {
   pool = connectedPool;
   console.log("Connected to database");
 
-  // Fetch all transformers
 // Fetch all transformers
 app.get("/api/users", async (req, res) => {
   try {
